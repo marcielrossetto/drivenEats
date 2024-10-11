@@ -297,7 +297,7 @@ body{
     display: none;
 }
 .infoPedido{
-    width: 20%;
+    width:250px;
     height: 40%;
     background-color: chartreuse;
     border-radius: 9px;
