@@ -1,7 +1,4 @@
-function perguntarIdade(){
-    alert('bOM DIA  ');
-    prompt('qua seu ano de nascimento');
-}
+// funções seleciona os itens e muda a cor da borda
 document.querySelectorAll('.tambSobremesa').forEach(tambSobremesa => {
     tambSobremesa.addEventListener('click', function() {
       // Remove a classe 'selected' de todos os itens
@@ -28,35 +25,7 @@ document.querySelectorAll('.tambPrato').forEach(tambPrato => {
   });
 
 
-/*uuuuuuu
-  document.querySelectorAll('.item').forEach(item => {
-    item.addEventListener('click', function() {
-      this.classList.toggle('selected');
-      checkAllSelected();
-    });
-  });
-  
-  function checkAllSelected() {
-    const sections = document.querySelectorAll('.section');
-    let allSelected = true;
-  
-    sections.forEach(section => {
-      const items = section.querySelectorAll('.item');
-      const selectedItems = section.querySelectorAll('.item.selected');
-      if (items.length !== selectedItems.length) {
-        allSelected = false;
-      }
-    });
-  
-    const acaoBotao = document.getElementById('acaoBotao');
-    if (allSelected) {
-        acaoBotao.classList.add('ativar');
-        acaoBotao.textContent = 'Todos os itens selecionados!';
-    } else {
-        acaoBotao.classList.remove('ativar');
-        acaoBotao.textContent = 'Clique aqui';
-    }
-  }*/
+
 /*uuuuuuu*/
 document.querySelectorAll('.tambPrato, .tambBebida, .tambSobremesa').forEach(secao => {
     secao.addEventListener('click', function() {
@@ -64,22 +33,18 @@ document.querySelectorAll('.tambPrato, .tambBebida, .tambSobremesa').forEach(sec
         checkAllSelected();
     });
 });
-
 function checkAllSelected() {
     const secoes = document.querySelectorAll('.tambPrato, .tambBebida, .tambSobremesa');
-    let allSelected = true;
+    let tudoSelecionado = true;
 
     secoes.forEach(secao => {
         const itens = secao.querySelectorAll('.tambPrato, .tambBebida, .tambSobremesa');
         const selecionarItens = secao.querySelectorAll('.item.selected');
         if (itens.length !== selecionarItens.length) {
-            allSelected = false;
+          tudoSelecionado = false;
         }
     });
-    
-
-    
-}
+ }
 
 document.querySelectorAll('.secao').forEach(secao => {
     secao.addEventListener('click', function() {
@@ -114,6 +79,9 @@ function checkAllSelected() {
     acaoBotao.disabled = true;
   }
 }
+
+
+//abrir confirmação
 function abrirConfirmacao() {
   const painel = document.querySelector(".janelaConfirmacao");
   painel.classList.remove('escondido');
@@ -133,20 +101,29 @@ document.getElementById('acaoBotao').addEventListener('click', function() {
       const precoSobremesa = parseFloat(sobremesaSelecionada.getAttribute('data-preco'));
 
       const total = precoPrato + precoBebida + precoSobremesa;
+
+      // Atualiza os detalhes do pedido
+      document.getElementById('detalhesPedido').innerHTML = `
+        <p>Prato: ${nomePrato} - R$ ${precoPrato.toFixed(2)}</p>
+        <p>Bebida: ${nomeBebida} - R$ ${precoBebida.toFixed(2)}</p>
+        <p>Sobremesa: ${nomeSobremesa} - R$ ${precoSobremesa.toFixed(2)}</p>
+      `;
+
+      // Atualiza o total do pedido
+      document.getElementById('totalPedido').textContent = `R$ ${total.toFixed(2)}`;
+
       abrirConfirmacao();
-      //prompt(`Você selecionou:\n- ${nomePrato}\n- ${nomeBebida}\n- ${nomeSobremesa}\n\nTotal: R$ ${total.toFixed(2)}`);
-      //alert('cuidado')
+  } else {
+      alert('Por favor, selecione um prato, uma bebida e uma sobremesa.');
   }
 });
 
+//botao cancelar volta na tela fazer pedido
+function botaoCancelar() {
+  const mudaClasse = document.querySelector('.janelaConfirmacao');
+  mudaClasse.classList.toggle("escondido")
+}
 
-//botao cancelar pedido
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('cancelarBotao').addEventListener('click', function() {
-      window.history.back();
-  });
-});
 
 class Produto {
   constructor(elemento) {
@@ -197,3 +174,35 @@ function somaValores() {
 
 // Chama a função para somar os valores
 somaValores();
+
+// enviar pedido whatsapp
+function enviarPedidoWhatsApp() {
+  const pratoSelecionado = document.querySelector('.tambPrato.selected');
+  const bebidaSelecionada = document.querySelector('.tambBebida.selected');
+  const sobremesaSelecionada = document.querySelector('.tambSobremesa.selected');
+
+  if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
+      const nomePrato = pratoSelecionado.getAttribute('data-nome');
+      const precoPrato = parseFloat(pratoSelecionado.getAttribute('data-preco'));
+      const nomeBebida = bebidaSelecionada.getAttribute('data-nome');
+      const precoBebida = parseFloat(bebidaSelecionada.getAttribute('data-preco'));
+      const nomeSobremesa = sobremesaSelecionada.getAttribute('data-nome');
+      const precoSobremesa = parseFloat(sobremesaSelecionada.getAttribute('data-preco'));
+
+      const total = precoPrato + precoBebida + precoSobremesa;
+
+      const mensagem = `Olá, gostaria de fazer um pedido:\n\n` +
+                       `Prato: ${nomePrato} - R$ ${precoPrato.toFixed(2)}\n` +
+                       `Bebida: ${nomeBebida} - R$ ${precoBebida.toFixed(2)}\n` +
+                       `Sobremesa: ${nomeSobremesa} - R$ ${precoSobremesa.toFixed(2)}\n\n` +
+                       `Total: R$ ${total.toFixed(2)}`;
+
+      const numeroWhatsApp = '5521996169369'; 
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+      window.open(urlWhatsApp, '_blank');
+  } else {
+      alert('Por favor, selecione um prato, uma bebida e uma sobremesa.');
+  }
+}
+
