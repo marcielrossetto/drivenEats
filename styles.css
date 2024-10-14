@@ -1,7 +1,7 @@
  
 
 body{
-    font-family: "Righteous", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     background-color: whitesmoke;
@@ -20,7 +20,7 @@ body{
     position: fixed;
     margin-top: 0;
     top: 0;
-   
+    font-family: 'Righteous';
 }
 
 .itemPrato {
@@ -98,6 +98,7 @@ body{
 }
 .subTitulo{
     margin-bottom: 0;
+    font-family: 'Righteous';
     padding-bottom: 0;
     height: 35px;
     background-color: whitesmoke;
