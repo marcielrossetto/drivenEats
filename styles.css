@@ -1,326 +1,311 @@
- 
-
-body{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: whitesmoke;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
 }
-.menu{
-    background-color:red;
-    color: #ffffff;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-top: 0px;
-    text-align: left;
-    width: 100%;
-    height: 90px;
-    position: fixed;
-    margin-top: 0;
-    top: 0;
-    font-family: 'Righteous';
+.menu {
+  background-color: red;
+  color: #ffffff;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-top: 0px;
+  text-align: left;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+  font-family: "Righteous";
 }
 
 .itemPrato {
-    display: flex;
-    overflow-x: auto; /* Habilita o scroll horizontal */
-    white-space: nowrap; /* Impede a quebra de linha dos itens */
-    margin-top: 0px;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+  display: flex;
+  overflow-x: auto; 
+  white-space: nowrap; 
+  margin-top: 0px;
+  justify-content: space-around;
+  flex-wrap: nowrap;
 }
 
 .tambPrato {
-    flex: 0 0 auto; /* Garante que os itens não encolham */
-    margin-right: 10px; /* Espaçamento entre os itens */
-    border-radius: 9px;
-    padding: 15px;
-    align-items: center;
-    overflow: hidden;
-    height: 216px;
-    background-color:white;
-    padding: 20px;
-    text-align: left;
+  flex: 0 0 auto;
+  margin-right: 10px; 
+  border-radius: 9px;
+  padding: 15px;
+  align-items: center;
+  overflow: hidden;
+  height: 216px;
+  background-color: white;
+  padding: 20px;
+  text-align: left;
 }
-.containerPrincipal{
-    margin-top: 128px;
+.containerPrincipal {
+  margin-top: 128px;
 }
 
-
-
-.containerPrato::-webkit-scrollbar{
-    width: 100vw;
-    height: 8px;
-  }
+.containerPrato::-webkit-scrollbar {
+  width: 100vw;
+  height: 8px;
+}
 .itemPrato h1 {
-    font-size: 26px;
-    padding: 5px;
+  font-size: 26px;
+  padding: 5px;
 }
-.tambPrato{
-    box-shadow: 0px 0px 10px -4px #00000040;
-
+.tambPrato {
+  box-shadow: 0px 0px 10px -4px #00000040;
 }
 .tambPrato h2 {
-    font-size: 12px;
+  font-size: 12px;
 }
-.tambPrato p{
-    font-size: 10px;
+.tambPrato p {
+  font-size: 10px;
 }
 .tambPrato img {
-    width: 144px;
-    height: 87px;
-    top: 183px;
-    left: 221px;
-    border-radius: 4px;
-    margin-right: 15px;
-
+  width: 144px;
+  height: 87px;
+  top: 183px;
+  left: 221px;
+  border-radius: 4px;
+  margin-right: 15px;
 }
 .titulo H1 {
-    align-items: baseline;
-    margin-top: 195px;
+  align-items: baseline;
+  margin-top: 195px;
 }
 .containerPrato {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
 }
-.subTitulo1{
-    margin-bottom: 0;
-    padding-bottom: 0;
-    height: 35px;
-    background-color: whitesmoke;
-    font-size: 12px;
-    margin-left: 20px;
-    margin-top: 0px;
+.subTitulo1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 35px;
+  background-color: whitesmoke;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 0px;
 }
-.subTitulo{
-    margin-bottom: 0;
-    font-family: 'Righteous';
-    padding-bottom: 0;
-    height: 35px;
-    background-color: whitesmoke;
-    font-size: 12px;
-    margin-left: 20px;
-    margin-top: 5px;
+.subTitulo {
+  margin-bottom: 0;
+  font-family: "Righteous";
+  padding-bottom: 0;
+  height: 35px;
+  background-color: whitesmoke;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
-.containerBebida{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+.containerBebida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.itemBebida{
-    display: flex;
-    overflow-x: auto; /* Habilita o scroll horizontal */
-    white-space: nowrap; /* Impede a quebra de linha dos itens */
-    margin-top: 15px;
-    background-color: #f7f5f5;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+.itemBebida {
+  display: flex;
+  overflow-x: auto; 
+  white-space: nowrap; 
+  margin-top: 15px;
+  background-color: #f7f5f5;
+  justify-content: space-around;
+  flex-wrap: nowrap;
 }
 .tambBebida {
-    flex: 0 0 auto; /* Garante que os itens não encolham */
-    margin-right: 10px; /* Espaçamento entre os itens */
-     margin: 10px;
-    border-radius: 9px;
-    padding: 15px;
-    align-items: center;
-    overflow: hidden;
-    height: 216px;
-    width: 155px;
-    background-color:white;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  margin: 10px;
+  border-radius: 9px;
+  padding: 15px;
+  align-items: center;
+  overflow: hidden;
+  height: 216px;
+  width: 155px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
 }
 .tambBebida img {
-    width: 144px;
-    height: 87px;
-    top: 183px;
-    left: 221px;
-    border-radius: 4px;
-    margin-right: 15px;
-
+  width: 144px;
+  height: 87px;
+  top: 183px;
+  left: 221px;
+  border-radius: 4px;
+  margin-right: 15px;
 }
-.tambBebida{
-    box-shadow: 0px 0px 10px -4px #00000040;
-
+.tambBebida {
+  box-shadow: 0px 0px 10px -4px #00000040;
 }
 .tambBebida h2 {
-    font-size: 16px;
+  font-size: 16px;
 }
-.tambBebida p{
-    font-size: 15px;
+.tambBebida p {
+  font-size: 15px;
 }
-.containerBebida::-webkit-scrollbar{
-    width: 100vw;
-    height: 8px;
-  }
-.containerSobremesa{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 80px;
+.containerBebida::-webkit-scrollbar {
+  width: 100vw;
+  height: 8px;
 }
-.itemSobremesa{
-    display: flex;
-    overflow-x: auto; /* Habilita o scroll horizontal */
-    white-space: nowrap; /* Impede a quebra de linha dos itens */
-    margin-top: 15px;
-    background-color: #f7f5f5;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+.containerSobremesa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.itemSobremesa {
+  display: flex;
+  overflow-x: auto; 
+  white-space: nowrap;
+  margin-top: 15px;
+  background-color: #f7f5f5;
+  justify-content: space-around;
+  flex-wrap: nowrap;
 }
 .tambSobremesa {
-    flex: 0 0 auto; /* Garante que os itens não encolham */
-    margin-right: 10px; /* Espaçamento entre os itens */
-     margin: 10px;
-    border-radius: 9px;
-    padding: 15px;
-    align-items: center;
-    overflow: hidden;
-    height: 216px;
-    width: 155px;
-    background-color:white;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  margin: 10px;
+  border-radius: 9px;
+  padding: 15px;
+  align-items: center;
+  overflow: hidden;
+  height: 216px;
+  width: 155px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
 }
 .tambSobremesa img {
-    width: 144px;
-    height: 87px;
-    top: 183px;
-    left: 221px;
-    border-radius: 4px;
-    margin-right: 15px;
-
+  width: 144px;
+  height: 87px;
+  top: 183px;
+  left: 221px;
+  border-radius: 4px;
+  margin-right: 15px;
 }
-.tambSobremesa{
-    box-shadow: 0px 0px 10px -4px #00000040;
-
+.tambSobremesa {
+  box-shadow: 0px 0px 10px -4px #00000040;
 }
 .tambSobremesa h2 {
-    font-size: 16px;
+  font-size: 16px;
 }
-.tambSobremesa p{
-    font-size: 15px;
+.tambSobremesa p {
+  font-size: 15px;
 }
-.containerSobremesa::-webkit-scrollbar{
-    width: 100vw;
-    height: 8px;
-  }
-  .tambSobremesa {
-    border: 2px solid transparent; /* Borda inicial da cor do card */
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-  }
-  
-  .tambSobremesa.selected{
-    border-color: green; /* Borda verde quando selecionado */
-  }
-  .tambBebida {
-    border: 2px solid transparent; /* Borda inicial da cor do card */
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-  }
-  
-  .tambBebida.selected{
-    border-color: green; /* Borda verde quando selecionado */
-  }
-  .tambPrato {
-    border: 2px solid transparent; /* Borda inicial da cor do card */
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-  }
-  
-  .tambPrato.selected{
-    border-color:  green; /* Borda verde quando selecionado */
+.containerSobremesa::-webkit-scrollbar {
+  width: 100vw;
+  height: 8px;
+}
+.tambSobremesa {
+  border: 2px solid transparent; 
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
 }
 
+.tambSobremesa.selected {
+  border-color: green; 
+}
+.tambBebida {
+  border: 2px solid transparent;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
 
-  
-  
-.janelaConfirmacao{
-    background-color: rgba(232, 232, 232, 0.9);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.tambBebida.selected {
+  border-color: green; 
 }
-.escondido{
-    display: none;
+.tambPrato {
+  border: 2px solid transparent; 
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
 }
-.infoPedido{
-    width:250px;
-    height: 40%;
-    background-color: chartreuse;
-    border-radius: 9px;
-    box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.5);
-    font-size: 2vh;
-    overflow-wrap: break-word;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 10%;
+
+.tambPrato.selected {
+  border-color: green; 
+}
+
+.janelaConfirmacao {
+  background-color: rgba(232, 232, 232, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.escondido {
+  display: none;
+}
+.infoPedido {
+  width: 250px;
+  height: 40%;
+  background-color: chartreuse;
+  border-radius: 9px;
+  box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.5);
+  font-size: 2vh;
+  overflow-wrap: break-word;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10%;
 }
 
 .botao-link {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 12px;
-    color: rgb(2, 2, 2);
-    background-color: #f6f6f7;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px; 
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: rgb(2, 2, 2);
+  background-color: #f6f6f7;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .botao-link:hover {
-    color: rgb(63, 62, 62);
-    background-color: #f1f1f1;
+  color: rgb(63, 62, 62);
+  background-color: #f1f1f1;
 }
-#cancelarBotao{
-    background-color: transparent; /* Remove o fundo */
-    border: 0px; /* Adiciona uma borda para visibilidade */
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    color: white;
+#cancelarBotao {
+  background-color: transparent; 
+  border: 0px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
 }
-#cancelarBotao:hover{
-    color: rgb(207, 204, 204);
+#cancelarBotao:hover {
+  color: rgb(207, 204, 204);
 }
 #acaoBotao {
-    border-radius: 89px;
-    width: 50%;
-    align-items: center;
-    background-color: #fafafa;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    
-       
+  border-radius: 89px;
+  width: 50%;
+  align-items: center;
+  background-color: #fafafa;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
 }
 #acaoBotao.ativar {
-    background-color: green;
-    color: white;
-  }
-.containerBotao{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    position: fixed;
+  background-color: green;
+  color: white;
+}
+.containerBotao {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: fixed;
 }
